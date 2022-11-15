@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:gravity="center"
+        android:text="Historial"
+        android:textColor="@color/secondary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_marginBottom="2dp"
+        android:layout_height="1dp" />
+
+    <Button
+        android:id="@+id/btnPlus"
+        style="@style/Widget.Material3.Button.UnelevatedButton"
+        android:layout_width="27dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/primary"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="20dp" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        style="@style/Widget.Material3.Button.UnelevatedButton"
+        android:layout_width="27dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/delete"
+        android:visibility="gone"
+        app:icon="@drawable/ic_cancel"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="20dp" />
+
+    <LinearLayout
+        android:id="@+id/lyActualizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="1dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="15dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/valNombre"
+                    style="?attr/textInputOutlinedDenseStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:hint="Nombre"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:inputType="text"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        app:endIconMode="clear_text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/valPrecio"
+                    style="?attr/textInputOutlinedDenseStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1"
+                    android:hint="Precio"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:inputType="numberDecimal"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/valCantidad"
+                    style="?attr/textInputOutlinedDenseStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:hint="Cantidad"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtCantidad"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:inputType="number"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/valUnidad"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1"
+                    android:hint="Unidad">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spnUnidad"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:focusableInTouchMode="false"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAgregar"
+            style="@style/Widget.Material3.Button.UnelevatedButton"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/primary"
+            android:text="Agregar"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_add"
+            app:iconGravity="textStart"
+            app:iconPadding="4dp"
+            app:iconSize="25dp" />
+
+        <Button
+            android:id="@+id/btnActualizar"
+            style="@style/Widget.Material3.Button.UnelevatedButton"
+            android:layout_width="155dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/secondary"
+            android:text="Actualizar"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_edit"
+            app:iconGravity="textStart"
+            app:iconPadding="4dp"
+            app:iconSize="25dp" />
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_height="3dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvArticulos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:text="TOTAL: S/ "
+        android:textColor="#0C67DA"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="delete">#B51A1A</color>
+    <color name="primary">#07AA5E</color>
+    <color name="secondary">#0054D1</color>
+    <color name="divider">#ACFFD8</color>
+    <color name="black">#FF000000</color>
+    <color name="finalizar">#E0FFE3</color>
+    <color name="purple_700">#AE0000</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+</resources>

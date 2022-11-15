@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:elevation="5dp"
+    app:cardCornerRadius="12dp"
+    app:cardUseCompatPadding="true">
+
+    <Button
+        android:id="@+id/btnFinalizar"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="48dp"
+        android:layout_height="56dp"
+        android:outlineSpotShadowColor="@color/white"
+        app:icon="@drawable/ic_finish"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="40dp" />
+
+    <Button
+        android:id="@+id/btnEliminar"
+        android:layout_width="48dp"
+        android:layout_height="56dp"
+        android:theme="@style/btn_delete"
+        android:visibility="gone"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="37dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:paddingStart="46dp"
+        android:paddingEnd="10dp">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="1dp"
+            android:text="Título"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtCantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Cantidad"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCantidad"
+            android:layout_alignParentEnd="true"
+            android:text="Total"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
